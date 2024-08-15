@@ -1,6 +1,6 @@
 Entrega Final de mi curso de Python para Coder House COMISION 57820
 
-Esta es una pagina web destinadas a un Club deportivo amateur donde se realizan diatintos tipos de desciplinas creada con PYTHON Y DJANGO.
+Esta es una pagina web destinadas a un Club deportivo amateur donde se realizan distintos tipos de disciplinas creada con PYTHON Y DJANGO.
 
 Menu Principal y funcionamiento: La pagina posee un:
 
