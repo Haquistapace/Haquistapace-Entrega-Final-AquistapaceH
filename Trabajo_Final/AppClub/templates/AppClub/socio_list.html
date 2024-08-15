@@ -1,0 +1,27 @@
+{% extends 'AppClub/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+
+<div class="row">
+    {% for socio in object_list %}
+        <div class="card" style="width: 18rem;" >
+           
+            <div class="card-body">
+                <h5 class="card-title">{{ socio.apellido }}, {{ socio.nombre }}</h5>
+                <p class="card-text">email: {{ socio.email }}</p>
+            <a href="{% url 'SocioDetail' socio.id %}" class="btn btn-primary">Ver</a>
+            <a href="{% url 'SocioUpdate' socio.id %}" class="btn btn-primary">Editar</a>
+            <a href="{% url 'SocioDelete' socio.id %}" class="btn btn-primary">Borrar</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'SocioCreate' %}">Agregar nuevo</a>
+
+{% endblock main %}

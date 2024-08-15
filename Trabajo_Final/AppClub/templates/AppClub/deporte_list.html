@@ -1,0 +1,30 @@
+{% extends 'AppClub/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+<div class="row">
+    {% for deporte in object_list %}
+        <div class="card" style="width: 18rem;">
+            {% if deporte.imagen %}
+                <img src="{{ deporte.imagen.url }}" class="card-img-top" alt="{{ deporte.nombre }}">
+            {% else %}
+                <img src="{% static 'default-image.jpg' %}" class="card-img-top" alt="Imagen no disponible">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ deporte.nombre }}</h5>
+                <p class="card-text">DIA: {{ deporte.dia }}</p>
+                <a href="{% url 'DeporteDetail' deporte.id %}" class="btn btn-primary">Ver</a>
+                <a href="{% url 'DeporteUpdate' deporte.id %}" class="btn btn-primary">Editar</a>
+                <a href="{% url 'DeporteDelete' deporte.id %}" class="btn btn-primary">Borrar</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'DeporteCreate' %}">Agregar nuevo</a>
+
+{% endblock main %}

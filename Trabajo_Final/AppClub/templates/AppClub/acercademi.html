@@ -1,0 +1,25 @@
+{% extends 'AppClub/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+    <!-- Content section 1-->
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'AppClub/assets/33.png' %}" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Acerca de Mí</h2>
+                        <p>Me llamo Hernán Aquistapace tengo 34 años y soy diseñador Multimedial egresado de la Facultad de Bellas Artes de la UNLP. Este sitio Web es mi entrega final para el curso de Python de la plataforma Coder House</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    {% endblock main %}
